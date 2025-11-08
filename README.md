@@ -185,16 +185,17 @@ See [Backend README](backend/README.md) for complete API documentation.
 ## 📸 Screenshots
 
 ### Home Page
-Modern landing page with hero section, features, and categories.
+![Home Page](screenshots/Home.png)
 
 ### Products Page
-Grid layout with search, filters, sorting, and responsive design.
+![Product Page](screenshots/ProductsPage.png)
 
 ### Cart Page
-Cart management with quantity controls and order summary.
+![Cart Page](screenshots/CartPage.png)
 
 ### Checkout & Receipt
-Form validation, order processing, and receipt modal.
+![checkout](screenshots/CheckoutPage.png)
+![Reciept](screenshots/Reciept.png)
 
 *Screenshots to be added after deployment*
 
