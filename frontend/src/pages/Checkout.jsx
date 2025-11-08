@@ -69,7 +69,8 @@ const Checkout = () => {
       setReceipt(response.data.data);
       setShowReceipt(true);
       success('Order placed successfully!');
-      await refreshCart();
+      // Don't refresh cart here - it will clear and cause re-render
+      // await refreshCart();
     } catch (err) {
       console.error('Checkout error:', err);
       error(err.message || 'Failed to process checkout');
@@ -80,10 +81,12 @@ const Checkout = () => {
 
   const closeReceipt = () => {
     setShowReceipt(false);
+    refreshCart(); // Refresh cart when closing modal
     navigate('/products');
   };
 
-  if (!cart || cart.items.length === 0) {
+  // Don't show empty cart message if receipt is being displayed
+  if ((!cart || cart.items.length === 0) && !showReceipt) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
